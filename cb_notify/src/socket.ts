@@ -1,4 +1,4 @@
-import messaging, { getMessaging, getToken } from '@react-native-firebase/messaging';
+import messaging, { getToken } from '@react-native-firebase/messaging';
 import { io, Socket } from 'socket.io-client';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getUserId, socketURL } from './config';
@@ -15,10 +15,8 @@ export const initSocket = async (
   }
   console.log('Creating new socket instance');
 
-  const app = getApp();
-  const messaging = getMessaging(app);
-  
-  const fcmToken = await getToken(messaging);
+
+  const fcmToken = await messaging().getToken();
   console.log('FCM Token:', fcmToken);
   const userId = await getUserId();
   console.log('User ID:', userId);
@@ -78,6 +76,10 @@ export const registerSocketEvents = (sock: Socket<any, any>) => {
   sock.on('error', (err: any) => {
     console.error('[Socket] General error:', err);
   });
+
+  sock.on('message', (data: any) => {
+    console.log(data);
+  })
 };
 
 

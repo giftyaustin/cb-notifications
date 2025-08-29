@@ -6,7 +6,6 @@ import notifee, {
   AndroidVisibility,
   Event,
 } from '@notifee/react-native';
-import { incomingCallData } from '../../types/calls.types';
 
 export const notificationChannels: Record<
   'calls' | 'screenCapture' | 'chats' | 'chats_silent',

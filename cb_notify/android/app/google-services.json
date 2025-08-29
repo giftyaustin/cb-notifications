@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "535807222494",
+    "project_id": "chatbucket-test",
+    "storage_bucket": "chatbucket-test.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535807222494:android:2daa96315a16f28797984f",
+        "android_client_info": {
+          "package_name": "com.chatbucket.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACByqFHh3dLpWo0FeNFFn8YNpt79vn3KE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

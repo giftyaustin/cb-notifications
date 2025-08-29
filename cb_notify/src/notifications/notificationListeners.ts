@@ -1,13 +1,11 @@
 import notifee, { EventType } from '@notifee/react-native';
-import { navigateTo } from '../../utils/commonFunction';
-import { SCREENS } from '../../navigation/screenNames';
 
 export const setupNotificationListeners = () => {
   notifee.onForegroundEvent(({ type, detail }) => {
     if (type === EventType.ACTION_PRESS) {
       switch (detail.pressAction?.id) {
         case 'answer':
-          navigateTo('CallScreen');
+          // navigateTo('CallScreen');
           break;
         case 'reject':
           console.log('Call rejected');
@@ -20,7 +18,7 @@ export const setupNotificationListeners = () => {
     if (type === EventType.ACTION_PRESS) {
       switch (detail.pressAction?.id) {
         case 'reply':
-          navigateTo(SCREENS.ChatSpecificScreen);
+          // navigateTo(SCREENS.ChatSpecificScreen);
           break;
       }
     }
