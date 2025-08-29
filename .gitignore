@@ -1,0 +1,90 @@
+# ------------------------
+# Global
+# ------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log
+package-lock.json
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.iml
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# ------------------------
+# React Native - Android
+# ------------------------
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+*.keystore
+*.jks
+*.apk
+*.ap_
+
+# ------------------------
+# React Native - iOS
+# ------------------------
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcworkspace
+ios/*.xcuserdata/
+ios/*.xcuserstate
+ios/DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# ------------------------
+# Metro / RN caches
+# ------------------------
+.expo/
+.expo-shared/
+*.packager
+*.hprof
+*.tmp
+*.temp
+*.log
+*.map
+*.pack
+*.pack.*
+*.orig.*
+*.rej
+
+# Coverage / builds
+dist/
+build/
+coverage/
+
+# ------------------------
+# NestJS
+# ------------------------
+dist/
+build/
+coverage/
+*.js.map
+__tests__
+
+# ------------------------
+# Monorepo Tooling (if using)
+# ------------------------
+lerna-debug.log
+.nx/
+.turbo/
