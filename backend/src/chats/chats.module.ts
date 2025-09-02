@@ -1,18 +1,11 @@
-import { Module } from "@nestjs/common";
+import { Module } from '@nestjs/common';
+import { ChatsGateway } from './chats.gateway';
 
 @Module({
-    imports: [
+  imports: [],
 
-    ],
-
-    providers: [
-
-    ],
-    controllers: [
-
-    ],
-    exports: [
-
-    ],
+  providers: [ChatsGateway],
+  controllers: [],
+  exports: [],
 })
-export class ChatsModule { }
+export class ChatsModule {}

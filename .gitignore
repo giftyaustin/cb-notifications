@@ -88,3 +88,5 @@ __tests__
 lerna-debug.log
 .nx/
 .turbo/
+
+user-storage.json

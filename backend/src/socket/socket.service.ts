@@ -7,7 +7,6 @@ export class SocketService {
   private logger = new Logger('WsGateway');
   private io: Server;
   constructor(
-
   ) { }
   setServerInstance(server: Server) {
     this.io = server;
