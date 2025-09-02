@@ -2,8 +2,8 @@
   "enabled": true,
   "prefabPath": "C:\\Users\\user\\.gradle\\caches\\modules-2\\files-2.1\\com.google.prefab\\cli\\2.1.0\\aa32fec809c44fa531f01dcfb739b5b3304d3050\\cli-2.1.0-all.jar",
   "packages": [
-    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\52a52e4c4792af3ca58b2df5dfea7545\\transformed\\react-android-0.78.1-debug\\prefab",
-    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\1727645527b8d4a52140297d30f9ce10\\transformed\\hermes-android-0.78.1-debug\\prefab",
-    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\bbbd7faada6db350ac59925f93ab342e\\transformed\\fbjni-0.7.0\\prefab"
+    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\d6442d4f6c42c908a88acb41595417c1\\transformed\\react-android-0.78.1-debug\\prefab",
+    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\3841e57e14f0425fb7620b86c972b6d5\\transformed\\hermes-android-0.78.1-debug\\prefab",
+    "C:\\Users\\user\\.gradle\\caches\\8.12\\transforms\\c77bf3a3f246fa30e27eaddc64859adc\\transformed\\fbjni-0.7.0\\prefab"
   ]
 }
