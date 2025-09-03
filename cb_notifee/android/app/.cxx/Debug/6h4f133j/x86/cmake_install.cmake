@@ -44,10 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/rnasyncstorage_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/rngesturehandler_codegen_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/rnreanimated_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/safeareacontext_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/rnscreens_autolinked_build/cmake_install.cmake")
+  include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/RNVectorIconsSpec_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/x86/rnworklets_autolinked_build/cmake_install.cmake")
 
 endif()

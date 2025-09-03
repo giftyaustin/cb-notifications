@@ -12,14 +12,15 @@ import {
   Dimensions,
 } from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {getUserId} from '../config';
 import {getSocket, sendMessage} from '../socket';
+import {Notify} from '../notifications/displayNotifications';
 
 const {width} = Dimensions.get('window');
 
-type Message = {
+export type Message = {
+  id: string;
   senderId: string;
   text: string;
   receiverId: string;
@@ -29,9 +30,9 @@ type Message = {
 // Utility function to format timestamp
 const formatTimestamp = (timestamp: Date | string | undefined): string => {
   if (!timestamp) return '';
-  
+
   let date: Date;
-  
+
   if (typeof timestamp === 'string') {
     // Handle ISO string format or other string formats
     date = new Date(timestamp);
@@ -40,12 +41,12 @@ const formatTimestamp = (timestamp: Date | string | undefined): string => {
   } else {
     return '';
   }
-  
+
   // Check if date is valid
   if (isNaN(date.getTime())) {
     return '';
   }
-  
+
   return date.toLocaleTimeString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
@@ -54,11 +55,13 @@ const formatTimestamp = (timestamp: Date | string | undefined): string => {
 };
 
 // Alternative: More detailed format with date for older messages
-const formatTimestampDetailed = (timestamp: Date | string | undefined): string => {
+const formatTimestampDetailed = (
+  timestamp: Date | string | undefined,
+): string => {
   if (!timestamp) return '';
-  
+
   let date: Date;
-  
+
   if (typeof timestamp === 'string') {
     date = new Date(timestamp);
   } else if (timestamp instanceof Date) {
@@ -66,18 +69,22 @@ const formatTimestampDetailed = (timestamp: Date | string | undefined): string =
   } else {
     return '';
   }
-  
+
   if (isNaN(date.getTime())) {
     return '';
   }
-  
+
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const messageDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  
+  const messageDate = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+  );
+
   const diffTime = today.getTime() - messageDate.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
+
   if (diffDays === 0) {
     // Today - show only time
     return date.toLocaleTimeString('en-US', {
@@ -122,13 +129,15 @@ export default function ChatScreen({route}: any) {
     const socket = await getSocket();
     socket.on('message', (message: Message) => {
       setMessages(prevMessages => [...prevMessages, message]);
+      Notify.incomingMessage(message, true);
+      socket.emit('message-received', {id: message.id, userId: userId});
     });
   };
 
   useEffect(() => {
     (async () => {
       const id = await getUserId();
-      setUserId(id);
+      setUserId(id.toString());
     })();
     listenMessages();
   }, []);
@@ -147,6 +156,7 @@ export default function ChatScreen({route}: any) {
     if (!message.trim()) return;
 
     const newMessage: Message = {
+      id: Math.random().toString(36).substring(2, 15),
       senderId: userId,
       text: message.trim(),
       receiverId: receiverId,
@@ -214,6 +224,9 @@ export default function ChatScreen({route}: any) {
             </Text>
             <Text style={styles.headerStatus}>Online</Text>
           </View>
+          <View style={styles.userIdContainer}>
+            <Text style={styles.userIdText}>Me: {userId}</Text>
+          </View>
         </View>
       </View>
 
@@ -266,7 +279,11 @@ export default function ChatScreen({route}: any) {
             ]}
             onPress={handleSend}
             disabled={!message.trim()}>
-            <Text style={{fontSize: 20, color: message.trim() ? '#FFFFFF' : '#999'}}>
+            <Text
+              style={{
+                fontSize: 20,
+                color: message.trim() ? '#FFFFFF' : '#999',
+              }}>
               ➤
             </Text>
           </TouchableOpacity>
@@ -275,7 +292,6 @@ export default function ChatScreen({route}: any) {
     </KeyboardAvoidingView>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -341,6 +357,14 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#34C759',
     marginTop: 2,
+  },
+  userIdContainer: {
+    alignItems: 'flex-end',
+  },
+  userIdText: {
+    fontSize: 12,
+    color: '#8E8E93',
+    fontWeight: '500',
   },
   content: {
     flex: 1,

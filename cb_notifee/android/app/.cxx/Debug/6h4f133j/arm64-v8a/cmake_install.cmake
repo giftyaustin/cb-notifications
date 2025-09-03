@@ -49,6 +49,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/rnreanimated_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/safeareacontext_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/rnscreens_autolinked_build/cmake_install.cmake")
+  include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/RNVectorIconsSpec_autolinked_build/cmake_install.cmake")
   include("D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/rnworklets_autolinked_build/cmake_install.cmake")
 
 endif()

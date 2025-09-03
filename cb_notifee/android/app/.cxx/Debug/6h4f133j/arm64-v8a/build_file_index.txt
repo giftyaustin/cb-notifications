@@ -3,5 +3,6 @@ D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-gesture-han
 D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-reanimated\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-safe-area-context\android\src\main\jni\CMakeLists.txt
 D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-screens\android\src\main\jni\CMakeLists.txt
+D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-vector-icons\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native-worklets\android\build\generated\source\codegen\jni\CMakeLists.txt
 D:\Chat-Bucket\cb-notifications\cb_notifee\node_modules\react-native\ReactAndroid\cmake-utils\default-app-setup\CMakeLists.txt

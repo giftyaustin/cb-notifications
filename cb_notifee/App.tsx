@@ -10,10 +10,12 @@ import {
 } from 'react-native-safe-area-context';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {View} from 'react-native';
+import useFCMSetup from './src/useFCMSetup';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  useFCMSetup();
   React.useEffect(() => {
     const connect = async () => {
       await connectSocket();

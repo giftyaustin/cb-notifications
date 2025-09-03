@@ -186,6 +186,31 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/RNVectorIconsSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/*.cpp")
+set(OLD_GLOB
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/ComponentDescriptors.cpp"
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/EventEmitters.cpp"
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/Props.cpp"
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/RNVectorIconsSpecJSI-generated.cpp"
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/ShadowNodes.cpp"
+  "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/react/renderer/components/RNVectorIconsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "D:/Chat-Bucket/cb-notifications/cb_notifee/android/app/.cxx/Debug/6h4f133j/arm64-v8a/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Chat-Bucket/cb-notifications/cb_notifee/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB
